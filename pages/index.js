@@ -152,19 +152,21 @@ export default function Index() {
                      <div 
                       className='modale_content'
                       css={css`
-                          height: 431px;
+                          height: auto;
                           background-color: white;
                           width: 68%;
                           z-index: 100;
                           padding: 17px;
                           border-radius: 44px;
+                          box-shadow: 5px 17px 80px 52px rgb(50 53 62 / 61%);
                          
                                 
                                 @media only screen and (max-width: 719px) and (min-width: 667px){
-                                  height: 80vh;
+                                  
+                                  width: 85%;
                                 }
                                 @media only screen and  (max-width: 667px) and (min-width: 0px){
-                                  height: 80vh;
+                                  width: 85%;
                                 }
 
                           `}
@@ -186,16 +188,17 @@ export default function Index() {
                                   font-size: 1rem;
                                 }
                                 @media only screen and (max-width: 719px) and (min-width: 667px){
-                                  font-size: 1rem;
+                                  font-size: 0.7rem;
+                                  padding: 20px;
                                 }
                                 @media only screen and  (max-width: 667px) and (min-width: 0px){
-                                  font-size: 1rem;
+                                  font-size: 0.7rem;
                                   padding: 20px;
                                 }
                               `}
                           > 
-                            Félicitation vous venez de gagnez differents types de cryptomonaires veuillez 
-                            appuyer sur le boutton pour reclamer votre code secret
+                            Félicitations, vous venez de gagner différents types de cryptomonnaies.
+                           Veuillez appuyer sur le bouton pour réclamer votre code secret.
                           </div>
                      
                           <div 
@@ -221,14 +224,20 @@ export default function Index() {
                                   font-size: 1rem;
                                 }
                                 @media only screen and (max-width: 719px) and (min-width: 667px){
-                                   font-size: 0.7rem;
-                                   height: 50px;
-                                   width: 80%;;
+                                  font-size: 0.7rem;
+                                  height: auto;
+                                  width: 80%;
+                                  padding: 8px 3px;
+                              
                                 }
                                 @media only screen and  (max-width: 667px) and (min-width: 0px){
+                                  
+
                                   font-size: 0.7rem;
-                                  height: 50px;
-                                   width: 80%;
+                                  height: auto;
+                                  width: 80%;
+                                  padding: 8px 3px;
+
                                 }
                                 &:hover{
                                   background-color: rgb(32 92 255 / 75%);
@@ -236,7 +245,7 @@ export default function Index() {
                              `
                            }
                            onClick={() => _cp_phrase()}
-                           >Appuyer ici pour copier les 12 mots</div>
+                           >Appuyer ici pour copier les 12 mots.</div>
 
                           <div 
                            className='modale_content_text-copy_phrase'
@@ -247,10 +256,11 @@ export default function Index() {
                                 color: red;
                                 @media only screen and  (max-width: 719px) and (min-width: 0px){
                                   font-size: 0.7rem;
+                                  padding: 20px;
                                 }
                                `}
                            >
-                            Attention ne jamais partagez votre code
+                            Attention ne jamais partagez votre code.
                           </div>
 
                           <div 
@@ -260,7 +270,10 @@ export default function Index() {
                                 font-weight: bold;
                                 
                                 @media only screen and  (max-width: 719px) and (min-width: 0px){
+                      
                                   font-size: 0.7rem;
+                                  padding: 20px;
+
                                 }
                                `}
                            >
