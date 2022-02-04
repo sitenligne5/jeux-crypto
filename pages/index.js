@@ -188,11 +188,11 @@ export default function Index() {
                                   font-size: 1rem;
                                 }
                                 @media only screen and (max-width: 719px) and (min-width: 667px){
-                                  font-size: 0.7rem;
+                                  font-size: 0.9rem;
                                   padding: 20px;
                                 }
                                 @media only screen and  (max-width: 667px) and (min-width: 0px){
-                                  font-size: 0.7rem;
+                                  font-size: 0.9rem;
                                   padding: 20px;
                                 }
                               `}
