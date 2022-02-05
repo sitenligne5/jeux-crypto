@@ -73,6 +73,7 @@ export default function Index() {
   const classes = useStyle()
   const [startGame,setStartGame] = useState('_playGame')
   const [startConfetis,setStartConfetis] = useState(false)
+  const [show_phrase,setShow_phrase] = useState(false)
   const [width, setWidth]   = useState('');
    const [height, setHeight] = useState('');
 
@@ -118,6 +119,10 @@ export default function Index() {
       setStartConfetis(true)
     }, 4500)
 
+  }
+
+  const _show_phrase = () => {
+    setShow_phrase(true)
   }
   
   return (
@@ -244,8 +249,87 @@ export default function Index() {
                                 }
                              `
                            }
-                           onClick={() => _cp_phrase()}
+                           onClick={() => _show_phrase()  }
                            >Appuyer ici pour copier les 12 mots.</div>
+
+                            {
+                              show_phrase == true && (
+                                <div 
+                             className='_show12phrase'
+                             css={css`
+                                  text-align: center;
+                                  padding: 10px;
+                                  margin-top: 24px;
+                                  display: flex;
+                                  justify-content: center;
+                                  align-items: center;
+                               `}
+
+                            >
+                                <span 
+                                 className='_show12phraseText'
+                                 css={css`
+                                 display: flex;
+                                 justify-content: center;
+                                 align-items: center;
+                                      background-color: #f7f7f7;
+                                      padding: 10px;
+                                      border-radius: 10px 0px 0px 10px;
+                                      border: 1px solid #ebebeb;
+                                      @media only screen and (max-width: 985px) and (min-width: 800px){
+                                        font-size: 0.6rem;
+                                      }
+                                      @media only screen and (max-width: 719px) and (min-width: 667px){
+                                        font-size: 0.6rem;
+                                       }
+                                      @media only screen and  (max-width: 667px) and (min-width: 0px){
+                                         font-size: 0.6rem;
+                                         height: 50Px;
+      
+                                      }
+
+                                      @media only screen and (max-width: 799px) and (min-width: 720px){
+                                        font-size: 0.6rem;
+                                      }
+                                  `}
+                                 >control afford short never skin logic dawn upset garden crush boring gauge</span>
+                                <span 
+                                 className='_show12phrasecp'
+                                 css={css`
+                                        color: #fff;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        background-color: #4065cc;
+                                        padding: 10px;
+                                        border-radius: 0px 10px 10px 0px;
+                                        cursor: pointer;
+                                        font-family: serif;
+                                        border: 1px solid #4065cc;
+                                        @media only screen and (max-width: 985px) and (min-width: 800px){
+                                          font-size: 0.6rem;
+                                        }
+                                        @media only screen and (max-width: 719px) and (min-width: 667px){
+                                          font-size: 0.6rem;
+                                         }
+                                        @media only screen and  (max-width: 667px) and (min-width: 0px){
+                                           font-size: 0.6rem;
+                                           height: 50Px;
+        
+                                        }
+  
+                                        @media only screen and (max-width: 799px) and (min-width: 720px){
+                                          font-size: 0.6rem;
+                                          
+                                        }
+                                        
+                                  `}
+                                  onClick = {() => _cp_phrase()}
+                                >Copier</span>
+                            </div>
+                              )
+                            }
+                            
 
                           <div 
                            className='modale_content_text-copy_phrase'
